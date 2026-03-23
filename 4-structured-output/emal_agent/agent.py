@@ -1,4 +1,5 @@
 from google.adk.agents import LlmAgent
+from google.adk.models.lite_llm import LiteLlm
 from pydantic import BaseModel, Field
 
 
@@ -14,7 +15,7 @@ class EmailContent(BaseModel):
 #----Define Agent-----
 root_agent = LlmAgent(
     name="email_agent",
-    model="gemini-2.0-flash",
+    model=LiteLlm(model="openrouter/arcee-ai/trinity-large-preview:free"),
     instruction="""
     You are an email generator assistant. Your task is to compose a professional email based on the user's request.
     
