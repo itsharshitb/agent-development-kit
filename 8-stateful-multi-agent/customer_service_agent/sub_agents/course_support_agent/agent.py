@@ -5,7 +5,7 @@ from google.adk.models.lite_llm import LiteLlm
 # Create the course support agent
 course_support_agent = LlmAgent(
     name="course_support",
-    model=LiteLlm(model="openrouter/free"),
+    model=LiteLlm(model="openrouter/arcee-ai/trinity-large-preview:free"),
     description="Course support agent for the AI Marketing Platform course",
     instruction="""
     You are the course support agent for the Fullstack AI Marketing Platform course.
